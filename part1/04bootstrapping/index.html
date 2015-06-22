@@ -1,0 +1,32 @@
+<html>
+	<head></head>
+	<body ng-app="app">
+		<div class="header">
+			<ul>
+				<li>
+					<a href="#Home">Home</a>
+				</li>
+				<li>
+					<a href="#About">About</a>
+				</li>
+				<li>
+					<a href="#Products">Products</a>
+				</li>
+			</ul>
+		</div>
+		<div ng-view>
+			All content will end up here
+		</div>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+			
+		<script src="app.js"></script>
+		<script src="app/about/aboutController.js"></script>
+		<script src="app/default/defaultController.js"></script>
+			
+		<script src="app/products/productsController.js"></script>
+		<script src="app/products/productsDetailController.js"></script>
+		<script src="app/products/productsService.js"></script>
+	</body>
+</html>

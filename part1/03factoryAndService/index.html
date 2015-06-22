@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>factories and services</title>
+	</head>
+	<body ng-app="app">
+		<h1>Factories and services</h1>
+		<div ng-controller="someController">
+			<p>{{ result }}</p>
+			<p>{{ result2 }}</p>
+			<p>
+				<fieldset>
+					<legend>user instance</legend>
+					{{ userInstance.name }} <br/>
+					{{ userInstance.address }} <br/>
+					{{ userInstance.email }}
+				</fieldset>
+			</p>
+		</div>
+		<div ng-controller="someOtherController">
+			<p> {{ result }}</p>
+			<p> {{ result2 }}</p>
+		</div>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="app.js"></script>
+		<script src="app/someController.js"></script>
+		<script src="app/someOtherController.js"></script>
+		<script src="app/someFactory.js"></script>
+		<script src="app/someFactoryModel.js"></script>
+		<script src="app/someService.js"></script>
+	</body>
+</html>

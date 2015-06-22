@@ -1,0 +1,1 @@
+angular.module("app",[]),angular.module("app").directive("directive",["service",function(e){return{restrict:"E",replace:!0,template:"<h1>{{title}}</h1>"}}]),angular.module("app").factory("service",function(){return{add:function(){}}});

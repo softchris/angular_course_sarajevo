@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="directives/directives.css">
+	</head>
+	<body ng-app="app">
+		<div ng-controller="appController">
+			<div ng-view style="height: 400px">
+				
+			</div>
+			<button ng-click="send()">Send</button>
+			
+			<div ng-controller="firstController">
+				{{ appMessage }}
+				<input type="text" ng-model="firstValue" />
+			</div>
+			
+			<div ng-controller="secondController">
+				<input type="text" ng-model="secondValue" />
+			</div>
+			
+			<div expander-directive >
+				<div class="header">
+					header
+				</div>
+				<div class="body">
+					body text
+				</div>
+			</div>
+			
+			<day-browser day-changed="changed(date)" ></day-browser>
+			<tabs>
+				<tab></tab>
+				<tab></tab>
+				<tab></tab>	
+			</tabs>
+			
+			
+			<isolated-directive-value class="isolated-directive-value" title="a title" description="desc.."  ></isolated-directive-value>
+			<big-header></big-header>
+			<info-card></info-card>
+			<info-card></info-card>
+			<info-card-improved></info-card-improved>
+			<info-card-improved></info-card-improved>
+			<info-card-improved></info-card-improved>
+			
+			
+		</div>
+		
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="app.js"></script>
+		
+		<script src="directives/expander/expander.js"></script>
+		<script src="directives/tabs.js"></script>
+		<script src="directives/tab.js"></script>
+		
+		<script src="directives/bigHeader.js"></script>
+		<script src="directives/infoCard.js"></script>
+		<script src="directives/infoCardImproved.js"></script>
+		<script src="directives/isolatedDirectiveValue.js"></script>
+		<script src="directives/dayBrowser/dayBrowser.js"></script>
+		
+		<script src="interceptors/customHeader.js"></script>
+		<script src="interceptors/errorHandler.js"></script>
+	</body>
+</html>
+	

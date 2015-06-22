@@ -1,0 +1,23 @@
+Products list <br/>
+Page {{ page }} <br/>
+PageSize {{ pageSize }}
+<table>
+	<tr>
+		<th ng-click="toggleSort('name')">
+			Name
+		</th>
+		<th ng-click="toggleSort('price')">
+			Price
+		</th>
+	</tr>
+	<tr ng-repeat="product in products | orderBy : filterParameter">
+		<td>
+			<a href="#Products/{{product.id}}">
+				{{ product.name }} 
+			</a>
+		</td>
+		<td>
+			{{ product.price }} :-
+		</td>
+	</tr>
+</table>
